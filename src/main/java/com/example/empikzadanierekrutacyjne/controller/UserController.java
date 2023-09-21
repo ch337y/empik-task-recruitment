@@ -37,7 +37,6 @@ public class UserController {
 
     @GetMapping("/users/statistics/{id}")
     Optional<UserStored> singleUser(@PathVariable Long id){
-        Optional<UserStored> optionalUser = userRepositoryService.checkUserStats(id);
-        return optionalUser;
+        return userRepositoryService.checkUserStats(id);
     }
 }

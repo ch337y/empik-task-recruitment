@@ -16,7 +16,7 @@ public class UserRepositoryService {
     public UserRepositoryService(UserStoredRepository repository) {
         this.repository = repository;
     }
-    public boolean processUser(User user){
+    public void processUser(User user){
         Long githubId = user.getId();
         Optional<UserStored> storedUser = repository.findById(githubId);
         UserStored tmpUser = new UserStored();
@@ -35,7 +35,6 @@ public class UserRepositoryService {
         );
 
         repository.save(tmpUser);
-        return true;
     }
 
     public Optional<UserStored> checkUserStats(Long githubId){

@@ -52,9 +52,6 @@ public class UserService {
         user.setCreatedAt(getStringOrDefault(userJson, "created_at", "not_found"));
         user.setCalculations(userJson.optLong("followers", 0), userJson.optLong("public_repos", 0));
 
-        if ("not_found".equals(user.getName())){
-            throw new UserNotFoundException(searchedLogin);
-        }
         return user;
     }
 
