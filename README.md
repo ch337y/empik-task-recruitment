@@ -1,5 +1,30 @@
-# Quick test URLs
+# General 
 
+## Tech stack:
+- Java 17
+- Spring boot
+- Gradle
+- H2 in-memory database as it made sense for test assingnment, easier to test - but can switch to any other if needed
+
+## From author
+This is very simple solution to provided requirements - it can be extended by:
+
+- adding load balancing in code (but recommended to use ready solutions)
+- placing the Github API information to separate config file
+- admin token to alter the config via API 
+- security measures for parsing the logins input from users
+- more security to check github API - if it's up, if the current URLs are correct etc.
+- API for changing the Github API source
+- API for deleting the users from repository
+- API for altering the users in repository
+- API for displaying the current sources
+- API for statistics etc.
+
+Generally there are countless of improvements to be added, but I have followed strictly the requirements of the task to:
+- reduce the time needed for bringing the value of the product (time-to-market)
+- reduce the cost of the product
+
+# Quick test URLs
 ## http://localhost:8080/users/octocat
 
 `{
