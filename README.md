@@ -11,6 +11,9 @@ This is very simple solution to provided requirements - it can be extended by:
 
 - adding load balancing in code (but recommended to use ready solutions)
 - placing the Github API information to separate config file
+- prevent DDOS by implementing Cloudflare like request filtering
+- Docker image for quick deploy
+- Feature branches on Github for rollback option
 - admin token to alter the config via API 
 - security measures for parsing the logins input from users
 - more security to check github API - if it's up, if the current URLs are correct etc.
